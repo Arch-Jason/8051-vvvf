@@ -1,0 +1,28 @@
+C51 COMPILER V9.60.7.0   SPWMDATA                                                          08/03/2023 19:08:11 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE SPWMDATA
+OBJECT MODULE PLACED IN .\Objects\spwmData.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE spwmData.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\
+                    -spwmData.lst) OBJECT(.\Objects\spwmData.obj)
+
+line level    source
+
+   1          unsigned char code spwm[] = {0, 3, 6, 9, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43, 45, 48, 51, 54, 56, 5
+             -9, 61, 64, 66, 68, 71, 73, 75, 77, 79, 81, 83, 84, 86, 88, 89, 90, 92, 93, 94, 95, 96, 97, 98, 98, 99, 99, 100, 100, 100
+             -, 100, 100, 100, 100, 99, 99, 98, 98, 97, 96, 95, 94, 93, 92, 90, 89, 88, 86, 84, 83, 81, 79, 77, 75, 73, 71, 68, 66, 64
+             -, 61, 59, 56, 54, 51, 48, 45, 43, 40, 37, 34, 31, 28, 25, 22, 19, 16, 13, 9, 6, 3};
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =    100    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

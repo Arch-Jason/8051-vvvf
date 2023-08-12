@@ -1,0 +1,289 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    08/12/2023  11:38:12  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\delay.obj, .\Objects\spwmData.obj, .\Objects\ADC0804.obj TO .\
+>> Objects\project PRINT (.\Listings\project.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  .\Objects\delay.obj (DELAY)
+  .\Objects\spwmData.obj (SPWMDATA)
+  .\Objects\ADC0804.obj (ADC0804)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCMP)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CASTF)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0013H     UNIT         ?DT?MAIN
+            IDATA   001BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     03E4H     UNIT         ?C?LIB_CODE
+            CODE    03F2H     019CH     UNIT         ?PR?SPWM_ROUTINE?MAIN
+            CODE    058EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    061AH     0064H     UNIT         ?CO?SPWMDATA
+            CODE    067EH     001BH     UNIT         ?PR?_DELAY?DELAY
+            CODE    0699H     0018H     UNIT         ?PR?TIMER0_INIT?MAIN
+            CODE    06B1H     0015H     UNIT         ?PR?MAIN?MAIN
+            CODE    06C6H     0010H     UNIT         ?PR?ADCREAD?ADC0804
+            CODE    06D6H     000BH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\project (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/12/2023  11:38:12  PAGE 2
+
+
+?PR?SPWM_ROUTINE?MAIN
+  +--> ?CO?SPWMDATA
+  +--> ?PR?ADCREAD?ADC0804
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?TIMER0_INIT?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\project (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:0008H         PUBLIC        triwaveFlag
+  D:00E8H         PUBLIC        P4
+  B:00A8H.7       PUBLIC        EA
+  D:000AH         PUBLIC        triwave
+  D:00A8H         PUBLIC        IE
+  D:000CH         PUBLIC        spwmDataDivider
+  D:00B8H         PUBLIC        IP
+  D:0010H         PUBLIC        polarFlag
+  C:06B1H         PUBLIC        main
+  D:0012H         PUBLIC        adc
+  C:0699H         PUBLIC        Timer0_Init
+  B:0080H.0       PUBLIC        P00
+  B:0080H.1       PUBLIC        P01
+  D:0098H         PUBLIC        SCON
+  C:03F2H         PUBLIC        spwm_routine
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  D:008EH         PUBLIC        AUXR
+  D:0013H         PUBLIC        spwmIndex
+  B:00A8H.1       PUBLIC        ET0
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  D:0015H         PUBLIC        frequency
+  D:0019H         PUBLIC        spwmIndexStep
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          TIMER0_INIT
+  C:0699H         LINE#         22
+  C:0699H         LINE#         23
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/12/2023  11:38:12  PAGE 3
+
+
+  C:0699H         LINE#         24
+  C:069CH         LINE#         25
+  C:069FH         LINE#         26
+  C:06A2H         LINE#         27
+  C:06A5H         LINE#         28
+  C:06A8H         LINE#         29
+  C:06AAH         LINE#         30
+  C:06ACH         LINE#         32
+  C:06AEH         LINE#         33
+  C:06B0H         LINE#         34
+  -------         ENDPROC       TIMER0_INIT
+  -------         PROC          SPWM_ROUTINE
+  C:03F2H         LINE#         37
+  C:040FH         LINE#         38
+  C:0412H         LINE#         39
+  C:0415H         LINE#         41
+  C:0420H         LINE#         42
+  C:0426H         LINE#         43
+  C:0437H         LINE#         44
+  C:0437H         LINE#         46
+  C:043FH         LINE#         47
+  C:0443H         LINE#         48
+  C:0449H         LINE#         49
+  C:044EH         LINE#         51
+  C:0454H         LINE#         52
+  C:0497H         LINE#         53
+  C:0499H         LINE#         55
+  C:049BH         LINE#         56
+  C:049DH         LINE#         57
+  C:049FH         LINE#         59
+  C:04A1H         LINE#         60
+  C:04A1H         LINE#         61
+  C:04A1H         LINE#         62
+  C:04A7H         LINE#         63
+  C:04EAH         LINE#         64
+  C:04ECH         LINE#         66
+  C:04EEH         LINE#         67
+  C:04F0H         LINE#         68
+  C:04F2H         LINE#         70
+  C:04F4H         LINE#         71
+  C:04F4H         LINE#         72
+  C:04F4H         LINE#         74
+  C:04FCH         LINE#         75
+  C:0507H         LINE#         76
+  C:050DH         LINE#         77
+  C:0519H         LINE#         79
+  C:0525H         LINE#         81
+  C:052AH         LINE#         82
+  C:0542H         LINE#         83
+  C:0550H         LINE#         84
+  C:0573H         LINE#         85
+  C:0573H         LINE#         87
+  -------         ENDPROC       SPWM_ROUTINE
+  -------         PROC          MAIN
+  C:06B1H         LINE#         89
+  C:06B1H         LINE#         90
+  C:06B4H         LINE#         91
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/12/2023  11:38:12  PAGE 4
+
+
+  C:06BFH         LINE#         92
+  C:06C4H         LINE#         93
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:067EH         PUBLIC        _delay
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        du
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0003H         SYMBOL        j
+  D:0005H         SYMBOL        k
+  -------         ENDDO         
+  C:067EH         LINE#         2
+  C:067EH         LINE#         3
+  C:067EH         LINE#         5
+  C:068CH         LINE#         6
+  C:068DH         LINE#         7
+  C:068FH         LINE#         8
+  C:0691H         LINE#         10
+  C:0691H         LINE#         11
+  C:0693H         LINE#         12
+  C:0695H         LINE#         13
+  C:0698H         LINE#         14
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        SPWMDATA
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:061AH         PUBLIC        spwm
+  -------         ENDMOD        SPWMDATA
+
+  -------         MODULE        ADC0804
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00B0H.2       PUBLIC        P32
+  B:00B0H.3       PUBLIC        P33
+  B:00B0H.4       PUBLIC        P34
+  B:00B0H.5       PUBLIC        P35
+  C:06C6H         PUBLIC        ADCRead
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          ADCREAD
+  C:06C6H         LINE#         12
+  C:06C6H         LINE#         13
+  C:06C8H         LINE#         14
+  C:06CAH         LINE#         16
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/12/2023  11:38:12  PAGE 5
+
+
+  C:06CCH         LINE#         17
+  C:06CEH         LINE#         18
+  C:06D1H         LINE#         20
+  C:06D3H         LINE#         21
+  C:06D5H         LINE#         22
+  -------         ENDPROC       ADCREAD
+  -------         ENDMOD        ADC0804
+
+  -------         MODULE        ?C?FPADD
+  C:0015H         PUBLIC        ?C?FPADD
+  C:0011H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FPMUL
+  C:0106H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPDIV
+  C:020FH         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FPCMP
+  C:02AEH         PUBLIC        ?C?FPCMP
+  C:02ACH         PUBLIC        ?C?FPCMP3
+  -------         ENDMOD        ?C?FPCMP
+
+  -------         MODULE        ?C?FCAST
+  C:032FH         PUBLIC        ?C?FCASTC
+  C:032AH         PUBLIC        ?C?FCASTI
+  C:0325H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        ?C?CASTF
+  C:0363H         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        ?C?LNEG
+  C:03E4H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?DELAY
+
+Program Size: data=28.0 xdata=0 code=1753
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

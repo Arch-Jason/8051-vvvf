@@ -1,0 +1,1 @@
+"spwmData.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\spwmData.lst) OBJECT(.\Objects\spwmData.obj)
